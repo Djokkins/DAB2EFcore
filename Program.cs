@@ -1,5 +1,5 @@
 ﻿using System;
-
+using Microsoft.EntityFrameworkCore;
 namespace DAB2
 {
     class Program

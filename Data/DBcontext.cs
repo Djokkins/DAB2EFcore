@@ -15,5 +15,16 @@ namespace DAB2.Data
         protected override void OnConfiguring(DbContextOptionsBuilder options)
             => options.UseSqlite("Data Source=helpsystem.db");
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Course>()
+                .HasKey(c => c.courseId);
+            modelBuilder.Entity<Exercise>()
+                .HasKey(c => c.number);
+            modelBuilder.Entity<Student>()
+                .HasKey(c => c.AuId);
+            modelBuilder.Entity<Teacher>()
+                .HasKey(c => c.AuId);
+        }
     }
 }

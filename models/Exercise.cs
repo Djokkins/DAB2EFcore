@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace DAB2.Data
 {
@@ -9,7 +10,6 @@ namespace DAB2.Data
     {
         public string helpwhere { get; set; }
         public string lecture { get; set; }
-
         public int number { get; set; }
     }
 }
